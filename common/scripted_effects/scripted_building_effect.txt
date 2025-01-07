@@ -5,15 +5,13 @@ on_province_owner_change_building_area_effect = {
 			has_building = university
 		}
 		area = {
-			if = {
-				limit = {
-					owned_by = event_target:new_owner
-					NOT = { has_province_modifier = dif_university_dev_cost }
-				}
-				add_province_modifier = {
-					name = dif_university_dev_cost
-					duration = -1
-				}
+			limit = {
+				owned_by = event_target:new_owner
+				NOT = { has_province_modifier = dif_university_dev_cost }
+			}
+			add_province_modifier = {
+				name = dif_university_dev_cost
+				duration = -1
 			}
 		}
 		if = {
@@ -26,13 +24,11 @@ on_province_owner_change_building_area_effect = {
 				}
 			}
 			area = {
-				if = {
-					limit = {
-						owned_by = FROM
-						has_province_modifier = dif_university_dev_cost
-					}
-					remove_province_modifier = dif_university_dev_cost
+				limit = {
+					owned_by = FROM
+					has_province_modifier = dif_university_dev_cost
 				}
+				remove_province_modifier = dif_university_dev_cost
 			}
 		}
 	}
@@ -72,16 +68,14 @@ on_province_owner_change_building_area_effect = {
 			}
 		}
 		area = {
-			if = {
-				limit = {
-					owned_by = event_target:new_owner
-					has_port = yes
-					NOT = { has_province_modifier = block_slave_raid_area_m }
-				}
-				add_province_modifier = {
-					name = block_slave_raid_area_m
-					duration = -1
-				}
+			limit = {
+				owned_by = event_target:new_owner
+				has_port = yes
+				NOT = { has_province_modifier = block_slave_raid_area_m }
+			}
+			add_province_modifier = {
+				name = block_slave_raid_area_m
+				duration = -1
 			}
 		}
 		if = {
@@ -97,13 +91,11 @@ on_province_owner_change_building_area_effect = {
 				}
 			}
 			area = {
-				if = {
-					limit = {
-						owned_by = FROM
-						has_province_modifier = block_slave_raid_area_m
-					}
-					remove_province_modifier = block_slave_raid_area_m
+				limit = {
+					owned_by = FROM
+					has_province_modifier = block_slave_raid_area_m
 				}
+				remove_province_modifier = block_slave_raid_area_m
 			}
 		}
 	}
